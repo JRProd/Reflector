@@ -46,7 +46,17 @@ public abstract class Tiles
 		//Determine how to get textures loaded to the Picture
 		texture = null;
 	}
-
+	
+	/**
+	 *@param xPosition the xPosition to set
+	 *@param yPosition the yPosition to set
+	 */
+	public void setPosition(byte xPos, byte yPos)
+	{
+		this.xPosition = xPos;
+		this.yPosition = yPos;
+	}
+	
 	/**
 	 * @return the xPosition
 	 */
