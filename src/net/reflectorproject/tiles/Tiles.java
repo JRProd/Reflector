@@ -13,6 +13,29 @@ import android.graphics.Picture;
  */
 public abstract class Tiles
 {
+	private enum Direction
+	{
+		EAST((byte)0), NORTH((byte)1), WEST((byte)2), SOUTH((byte)3);
+		
+		private byte direction;
+		
+		private Direction(byte direct)
+		{
+			direction = direct;
+		}
+		
+		public byte getDirection()
+		{
+			return direction;
+		}
+		
+		public String toString()
+		{
+			return Integer.toString(direction);
+		}
+	}
+	
+	
 	private byte xPosition;
 	private byte yPosition;
 	
@@ -20,23 +43,30 @@ public abstract class Tiles
 	
 	private Picture texture;
 	
+	private Direction direction;
+	
 	public Tiles()
 	{
 		//X and Y position in the grid, Movable to false, and texture to null
-		this((byte)0,(byte)0,false,null);
+		this((byte)0,(byte)0,false,null,(byte)0);
 	}
 	
 	public Tiles(byte x, byte y)
 	{
-		this(x,y,false,null);
+		this(x,y,false,null,(byte)0);
 	}
 	
 	public Tiles(byte x, byte y, boolean move)
 	{
-		this(x,y,move,null);
+		this(x,y,move,null,(byte)0);
 	}
 	
 	public Tiles(byte x, byte y, boolean move, String src)
+	{
+		this(x,y,move,src,(byte)0);
+	}
+	
+	public Tiles(byte x, byte y, boolean move, String src, byte direct)
 	{
 		setxPosition(x);
 		setyPosition(y);
@@ -45,6 +75,25 @@ public abstract class Tiles
 		
 		//Determine how to get textures loaded to the Picture
 		texture = null;
+		
+		switch(direct)
+		{
+			case 0:
+				direction = Direction.EAST;
+				break;
+			case 1:
+				direction = Direction.NORTH;
+				break;
+			case 2:
+				direction = Direction.WEST;
+				break;
+			case 3:
+				direction = Direction.SOUTH;
+				break;
+			default:
+				direction = Direction.EAST;
+				break;
+		}
 	}
 	
 	/**
@@ -87,5 +136,16 @@ public abstract class Tiles
 	public void setyPosition(byte yPos)
 	{
 		this.yPosition = yPos;
+	}
+	
+	public byte getDirection()
+	{
+		return direction.direction;
+	}
+	
+	public String toString()
+	{
+		return this.getClass().getSimpleName() + " xPos = " + xPosition + " yPos = " + yPosition
+				+ " movable = " + movable + " texture " + texture.toString() + direction.toString();
 	}
 }
