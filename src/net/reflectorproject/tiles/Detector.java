@@ -46,4 +46,14 @@ public class Detector extends Tile
 		this.detected = detected;
 	}
 
+	public void update() {
+		// TODO Auto-generated method stub
+		//Getting error message "The type Detector must implement the inherited abstract method Tile.update()"
+	}
+	
+	public void paint(){
+		//TODO Auto-generated method stub
+		//Getting error message
+	}
+
 }

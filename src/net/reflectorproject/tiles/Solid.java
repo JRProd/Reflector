@@ -22,5 +22,15 @@ public class Solid extends Tile
 		super(x, y, move, src, direct);
 	}
 
+	public void update() {
+		// TODO Auto-generated method stub
+		//Getting error message "The type Solid must implement the inherited abstract method Tile.update()"
+	}
+	
+	
+	public void paint(){
+		//TODO Auto-generated method stub
+		//Getting error message
+	}
 }
 
