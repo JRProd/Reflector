@@ -97,6 +97,8 @@ public abstract class Tile
 		}
 	}
 	
+	public abstract void update();
+	
 	/**
 	 *@param xPosition the xPosition to set
 	 *@param yPosition the yPosition to set
