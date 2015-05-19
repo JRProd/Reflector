@@ -9,6 +9,8 @@ import android.graphics.Picture;
  * Tiles will be the generic tile object of Reflector. Any object that can be placed, moved, manipulated, or otherwise intractable is a Tile.
  * 
  * @author Rawhide
+ * @author Colonel Miles
+ * 
  *
  */
 public abstract class Tiles
