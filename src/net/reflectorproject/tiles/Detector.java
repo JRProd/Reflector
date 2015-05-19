@@ -1,6 +1,6 @@
 package net.reflectorproject.tiles;
 
-public class Detector extends Tiles
+public class Detector extends Tile
 {
 	
 	private boolean detected;

@@ -1,6 +1,7 @@
 package net.reflectorproject.tiles;
 
-	
+public class Solid extends Tile
+{
 	public Solid() {
 		this((byte)0,(byte)0,false,null,(byte)0);
 	}

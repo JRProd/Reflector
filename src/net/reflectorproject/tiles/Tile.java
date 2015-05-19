@@ -12,7 +12,7 @@ import android.graphics.Picture;
  * @author Colonel Miles
  * 
  */
-public abstract class Tiles
+public abstract class Tile
 {
 	private enum Direction
 	{
@@ -46,28 +46,28 @@ public abstract class Tiles
 	
 	private Direction direction;
 	
-	public Tiles()
+	public Tile()
 	{
 		//X and Y position in the grid, Movable to false, and texture to null
 		this((byte)0,(byte)0,false,null,(byte)0);
 	}
 	
-	public Tiles(byte x, byte y)
+	public Tile(byte x, byte y)
 	{
 		this(x,y,false,null,(byte)0);
 	}
 	
-	public Tiles(byte x, byte y, boolean move)
+	public Tile(byte x, byte y, boolean move)
 	{
 		this(x,y,move,null,(byte)0);
 	}
 	
-	public Tiles(byte x, byte y, boolean move, String src)
+	public Tile(byte x, byte y, boolean move, String src)
 	{
 		this(x,y,move,src,(byte)0);
 	}
 	
-	public Tiles(byte x, byte y, boolean move, String src, byte direct)
+	public Tile(byte x, byte y, boolean move, String src, byte direct)
 	{
 		setxPosition(x);
 		setyPosition(y);
