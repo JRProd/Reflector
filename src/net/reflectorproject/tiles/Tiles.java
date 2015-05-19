@@ -11,7 +11,6 @@ import android.graphics.Picture;
  * @author Rawhide
  * @author Colonel Miles
  * 
- *
  */
 public abstract class Tiles
 {
