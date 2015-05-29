@@ -2,12 +2,12 @@ package net.reflectorproject.tiles;
 
 public class Projector extends Solid {
 
-	/////////////////////////////////////////////
+	////////////////////////////////////////////
 	private boolean projectDirectionEast;
 	private boolean projectDirectionNorth;
 	private boolean projectDirectionWest;
 	private boolean projectDirectionSouth;
-	/////////////////////////////////////////////
+	////////////////////////////////////////////
 
 	public Projector() 
 	{
@@ -84,6 +84,14 @@ public class Projector extends Solid {
 
 	////////////////////////////////////////////////////////////////////////////////
 
+	public void update()
+	{
+		
+	}
 	
+	public void paint()
+	{
+		
+	}
 	
 }

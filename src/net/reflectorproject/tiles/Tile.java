@@ -98,6 +98,7 @@ public abstract class Tile
 	}
 	
 	public abstract void update();
+	public abstract void paint();
 	
 	/**
 	 *@param xPosition the xPosition to set
