@@ -10,6 +10,7 @@ import android.graphics.Picture;
  * 
  * @author Rawhide
  * @author Colonel Miles
+ * @author Enigma
  * 
  */
 public abstract class Tile
