@@ -70,8 +70,8 @@ public abstract class Tile
 	
 	public Tile(byte x, byte y, boolean move, String src, byte direct)
 	{
-		setxPosition(x);
-		setyPosition(y);
+		setXPosition(x);
+		setYPosition(y);
 		
 		movable = move;
 		
@@ -114,7 +114,7 @@ public abstract class Tile
 	/**
 	 * @return the xPosition
 	 */
-	public byte getxPosition()
+	public byte getXPosition()
 	{
 		return xPosition;
 	}
@@ -122,7 +122,7 @@ public abstract class Tile
 	/**
 	 * @param xPosition the xPosition to set
 	 */
-	public void setxPosition(byte xPos)
+	public void setXPosition(byte xPos)
 	{
 		this.xPosition = xPos;
 	}
@@ -130,7 +130,7 @@ public abstract class Tile
 	/**
 	 * @return the yPosition
 	 */
-	public byte getyPosition()
+	public byte getYPosition()
 	{
 		return yPosition;
 	}
@@ -138,7 +138,7 @@ public abstract class Tile
 	/**
 	 * @param yPosition the yPosition to set
 	 */
-	public void setyPosition(byte yPos)
+	public void setYPosition(byte yPos)
 	{
 		this.yPosition = yPos;
 	}
