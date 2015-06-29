@@ -4,10 +4,10 @@ public class Transformer extends Detector {
 
 	private boolean detected;
 	////////////////////////////////////////////
-	private byte north;
-	private byte east;
-	private byte south;
-	private byte west;
+	private byte northArm;
+	private byte eastArm;
+	private byte southArm;
+	private byte westArm;
 	////////////////////////////////////////////
 	
 	public Transformer() 
@@ -37,10 +37,10 @@ public class Transformer extends Detector {
 	public Transformer(byte x, byte y, boolean move, String src, byte direct, byte n, byte e, byte s, byte w) 
 	{
 	super(x, y, move, src, direct);
-	north=n;
-	east=e;
-	south=s;
-	west=w;
+	northArm=n;
+	eastArm=e;
+	southArm=s;
+	westArm=w;
 	// TODO Auto-generated constructor stub
 	}
 	
@@ -66,42 +66,42 @@ public class Transformer extends Detector {
 	
 	public boolean isProjectDirectionEast()
 	{
-		return detected&&east==1;
+		return detected&&eastArm==1;
 	}
 	
 	public void setBranchEast(byte b)
 	{
-		east=b;
+		eastArm=b;
 	}
 	
 	public boolean isProjectDirectionNorth()
 	{
-		return detected&&north==1;
+		return detected&&northArm==1;
 	}
 	
 	public void setBranchNorth(byte b)
 	{
-		north = b;
+		northArm = b;
 	}
 	
 	public boolean isProjectDirectionWest()
 	{
-		return detected&&west==1;
+		return detected&&westArm==1;
 	}
 	
 	public void setBranchWest(byte b)
 	{
-		west = b;
+		westArm = b;
 	}
 	
 	public boolean isProjectDirectionSouth()
 	{
-		return detected&&south==1;
+		return detected&&southArm==1;
 	}
 	
 	public void setBranchSouth(byte b)
 	{
-		south = b;
+		southArm = b;
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////
