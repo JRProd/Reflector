@@ -69,9 +69,9 @@ public class Transformer extends Detector {
 		return detected&&east==1;
 	}
 	
-	public void setProjectDirectionEast()
+	public void setBranchEast(byte b)
 	{
-		east=1;
+		east=b;
 	}
 	
 	public boolean isProjectDirectionNorth()
@@ -79,9 +79,9 @@ public class Transformer extends Detector {
 		return detected&&north==1;
 	}
 	
-	public void setProjectDirectionNorth()
+	public void setBranchNorth(byte b)
 	{
-		north = 1;
+		north = b;
 	}
 	
 	public boolean isProjectDirectionWest()
@@ -89,9 +89,9 @@ public class Transformer extends Detector {
 		return detected&&west==1;
 	}
 	
-	public void setProjectDirectionWest()
+	public void setBranchWest(byte b)
 	{
-		west = 1;
+		west = b;
 	}
 	
 	public boolean isProjectDirectionSouth()
@@ -99,9 +99,9 @@ public class Transformer extends Detector {
 		return detected&&south==1;
 	}
 	
-	public void setProjectDirectionSouth()
+	public void setBranchSouth(byte b)
 	{
-		south = 1;
+		south = b;
 	}
 	
 	////////////////////////////////////////////////////////////////////////////////
