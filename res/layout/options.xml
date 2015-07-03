@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageButton
+        android:id="@+id/bBack"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Options" 
+        android:textSize="30sp"/>
+
+    <ToggleButton
+        android:id="@+id/tbSoundEffects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOptions"
+        android:layout_marginTop="40dp"
+        android:layout_toLeftOf="@+id/tvOptions"
+        android:checked="true"/>
+
+    <TextView
+        android:id="@+id/tvSoundEffects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tbSoundEffects"
+        android:layout_alignBottom="@+id/tbSoundEffects"
+        android:layout_alignLeft="@+id/tbSoundEffects"
+        android:layout_marginLeft="80dp"
+        android:text="Sound Effects"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ToggleButton
+        android:id="@+id/tbMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tbSoundEffects"
+        android:layout_below="@+id/tbSoundEffects"
+        android:layout_marginTop="30dp"
+        android:checked="true" />
+
+    <TextView
+        android:id="@+id/tvMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tbMusic"
+        android:layout_alignBottom="@+id/tbMusic"
+        android:layout_alignLeft="@+id/tbMusic"
+        android:layout_marginLeft="80dp"
+        android:text="Music"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ToggleButton
+        android:id="@+id/tbTutorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:textOff="Rewatch Tutorial?"
+        android:textOn="Tutorial Will Start When App is Started Again" />
+
+    <Button
+        android:id="@+id/bSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Save?" />
+
+</RelativeLayout>

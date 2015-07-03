@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/bBack"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_launcher" />
+    
+   <Button
+       android:id="@+id/bRemoveAds"
+       android:layout_width="300dp"
+       android:layout_height="45dp"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="175dp"
+       android:text="Remove Our Ads"
+       />
+
+    <Button
+        android:id="@+id/bHints"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/bRemoveAds"
+        android:layout_alignRight="@+id/bRemoveAds"
+        android:layout_marginBottom="65dp"
+        android:text="Hints" />
+
+    <Button
+        android:id="@+id/bSkips"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/bRemoveAds"
+        android:layout_alignLeft="@+id/bRemoveAds"
+        android:layout_marginBottom="65dp"
+        android:text="Skips" />
+
+    <TextView
+        android:id="@+id/tvPowerUps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bRemoveAds"
+        android:layout_marginBottom="130dp"
+        android:layout_centerHorizontal="true"
+        android:text="Power Ups"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvLevelPacks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Purchace Level Packs"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ScrollView
+        android:id="@+id/svLevelPacks"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLevelPacks"
+        android:layout_marginTop="20dp" 
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/lvLevelPacks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+
+        	<Button
+        	    android:id="@+id/bPurchasePack1"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="PurchasePack1"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack2"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="PurchasePack2"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack3"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="Purchase Pack 3"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack4"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="Purchase Pack 4"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack5"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="Purchase Pack 5"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack6"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="Purchase Pack 6"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack7"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="Purchase Pack 7"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack8"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="Purchase Pack 8"
+        	    />
+        	<Button
+        	    android:id="@+id/bPurchasePack9"
+        		android:layout_width="fill_parent"
+        		android:layout_height="45dp"
+        		android:text="Purchase Pack 9"
+        	    />  
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
