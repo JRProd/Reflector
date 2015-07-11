@@ -1,5 +1,7 @@
 package net.reflectorproject.tiles;
 
+import net.reflectorproject.world.Grid;
+
 public class Prism extends Detector {
 
 	private boolean detected;
@@ -7,24 +9,29 @@ public class Prism extends Detector {
 	public Prism() 
 	{
 		// TODO Auto-generated constructor stub
-		this((byte)0,(byte)0,false,null);
+		this(null,(byte)0,(byte)0,false,null);
 	}
 	
-	public Prism(byte x, byte y) 
+	public Prism(Grid w)
 	{
-		this(x, y,false,null);
+		this(w,(byte)0,(byte)0,false,null);
+	}
+	
+	public Prism(Grid w,byte x, byte y) 
+	{
+		this(w,x, y,false,null);
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Prism(byte x, byte y, boolean move) 
+	public Prism(Grid w,byte x, byte y, boolean move) 
 	{
-		this(x, y, move,null);
+		this(w,x, y, move,null);
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Prism(byte x, byte y, boolean move, String src) 
+	public Prism(Grid w,byte x, byte y, boolean move, String src) 
 	{
-		super(x, y, move, src);
+		super(w,x, y, move, src);
 		// TODO Auto-generated constructor stub
 	}
 	

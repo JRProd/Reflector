@@ -1,5 +1,7 @@
 package net.reflectorproject.tiles;
 
+import net.reflectorproject.world.Grid;
+
 public class Detector extends Tile
 {
 	
@@ -7,31 +9,36 @@ public class Detector extends Tile
 
 	public Detector()
 	{
-		this((byte)0, (byte)0, true, null, (byte)0);
+		this(null,(byte)0, (byte)0, true, null, (byte)0);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Detector(Grid w)
+	{
+		this(w,(byte)0,(byte)0,false,null,(byte)0);
+	}
+
+	public Detector(Grid w,byte x, byte y)
+	{
+		this(w,x, y, true, null, (byte)0);
 		// TODO Auto-generated constructor stub
 	}
 
-	public Detector(byte x, byte y)
+	public Detector(Grid w,byte x, byte y, boolean move)
 	{
-		this(x, y, true, null, (byte)0);
+		this(w,x, y, move, null, (byte)0);
 		// TODO Auto-generated constructor stub
 	}
 
-	public Detector(byte x, byte y, boolean move)
+	public Detector(Grid w,byte x, byte y, boolean move, String src)
 	{
-		this(x, y, move, null, (byte)0);
+		this(w,x, y, move, src, (byte)0);
 		// TODO Auto-generated constructor stub
 	}
 
-	public Detector(byte x, byte y, boolean move, String src)
+	public Detector(Grid w,byte x, byte y, boolean move, String src, byte direct)
 	{
-		this(x, y, move, src, (byte)0);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Detector(byte x, byte y, boolean move, String src, byte direct)
-	{
-		super(x, y, move, src, direct);
+		super(w,x, y, move, src, direct);
 		// TODO Auto-generated constructor stub
 		setDetected(false);
 	}

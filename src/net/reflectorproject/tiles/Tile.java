@@ -3,6 +3,7 @@
  */
 package net.reflectorproject.tiles;
 
+import net.reflectorproject.world.Grid;
 import android.graphics.Picture;
 
 /**
@@ -37,6 +38,7 @@ public abstract class Tile
 		}
 	}
 	
+	private Grid world;
 	
 	private byte xPosition;
 	private byte yPosition;
@@ -50,25 +52,30 @@ public abstract class Tile
 	public Tile()
 	{
 		//X and Y position in the grid, Movable to false, and texture to null
-		this((byte)0,(byte)0,false,null,(byte)0);
+		this(null,(byte)0,(byte)0,false,null,(byte)0);
 	}
 	
-	public Tile(byte x, byte y)
+	public Tile(Grid w)
 	{
-		this(x,y,false,null,(byte)0);
+		this(w,(byte)0,(byte)0,false,null,(byte)0);
 	}
 	
-	public Tile(byte x, byte y, boolean move)
+	public Tile(Grid w,byte x, byte y)
 	{
-		this(x,y,move,null,(byte)0);
+		this(w,x,y,false,null,(byte)0);
 	}
 	
-	public Tile(byte x, byte y, boolean move, String src)
+	public Tile(Grid w,byte x, byte y, boolean move)
 	{
-		this(x,y,move,src,(byte)0);
+		this(w,x,y,move,null,(byte)0);
 	}
 	
-	public Tile(byte x, byte y, boolean move, String src, byte direct)
+	public Tile(Grid w,byte x, byte y, boolean move, String src)
+	{
+		this(w,x,y,move,src,(byte)0);
+	}
+	
+	public Tile(Grid w,byte x, byte y, boolean move, String src, byte direct)
 	{
 		setXPosition(x);
 		setYPosition(y);
@@ -146,6 +153,11 @@ public abstract class Tile
 	public byte getDirection()
 	{
 		return direction.direction;
+	}
+	
+	public Grid getWorld()
+	{
+		return world;
 	}
 	
 	public String toString()
