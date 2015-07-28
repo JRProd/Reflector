@@ -80,33 +80,19 @@ public abstract class Tile
 		setXPosition(x);
 		setYPosition(y);
 		
-		movable = move;
+		setMovable(move);
 		
 		//Determine how to get textures loaded to the Picture
-		texture = null;
+		setTexture(src);
 		
-		switch(direct)
-		{
-			case 0:
-				direction = Direction.EAST;
-				break;
-			case 1:
-				direction = Direction.NORTH;
-				break;
-			case 2:
-				direction = Direction.WEST;
-				break;
-			case 3:
-				direction = Direction.SOUTH;
-				break;
-			default:
-				direction = Direction.EAST;
-				break;
-		}
+		setDirection(direct);
+		
+		
 	}
 	
 	public abstract void update();
 	public abstract void paint();
+	public abstract void decodeMetaData(short metaData);
 	
 	/**
 	 *@param xPosition the xPosition to set
@@ -153,6 +139,53 @@ public abstract class Tile
 	public byte getDirection()
 	{
 		return direction.direction;
+	}
+	
+	public void setDirection(byte direct)
+	{
+		switch(direct)
+		{
+			case 0:
+				direction = Direction.EAST;
+				break;
+			case 1:
+				direction = Direction.NORTH;
+				break;
+			case 2:
+				direction = Direction.WEST;
+				break;
+			case 3:
+				direction = Direction.SOUTH;
+				break;
+			default:
+				direction = Direction.EAST;
+				break;
+		}
+	}
+	
+	public boolean isMovable()
+	{
+		return movable;
+	}
+	
+	public void setMovable(boolean move)
+	{
+		movable = move;
+	}
+	
+	public Picture getTexture()
+	{
+		return texture;
+	}
+	
+	public void setTexture(String src)
+	{
+		
+	}
+	
+	public void setTexture(Picture pic)
+	{
+		
 	}
 	
 	public Grid getWorld()

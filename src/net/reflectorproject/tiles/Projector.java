@@ -4,14 +4,8 @@ import net.reflectorproject.world.Grid;
 
 public class Projector extends Solid
 {
-
-	// //////////////////////////////////////////
-	private boolean projectDirectionEast;
-	private boolean projectDirectionNorth;
-	private boolean projectDirectionWest;
-	private boolean projectDirectionSouth;
-
-	// //////////////////////////////////////////
+	
+	private byte color;
 
 	public Projector()
 	{
@@ -48,46 +42,30 @@ public class Projector extends Solid
 		super(w, x, y, move, src, direct);
 		// TODO Auto-generated constructor stub
 	}
-
-	// /////////////////////////////////////////////////////////////////
-	public boolean isProjectDirectionEast()
+	
+	public Projector(Grid w, byte x, byte y, boolean move, String src,
+			byte direct, byte c)
 	{
-		return projectDirectionEast;
+		super(w, x, y, move, src, direct);
+		// TODO Auto-generated constructor stub
+		setColor(c);
 	}
-
-	public void setProjectDirectionEast(boolean proDirEast)
+	
+	
+	public Projector(Grid w, short metadata)
 	{
-		projectDirectionEast = proDirEast;
+		this(w);
+		decodeMetaData(metadata);
 	}
-
-	public boolean isProjectDirectionNorth()
+	
+	public byte getColor()
 	{
-		return projectDirectionNorth;
+		return color;
 	}
-
-	public void setProjectDirectionNorth(boolean proDirNorth)
+	
+	public void setColor(byte c)
 	{
-		projectDirectionNorth = proDirNorth;
-	}
-
-	public boolean isProjectDirectionWest()
-	{
-		return projectDirectionWest;
-	}
-
-	public void setProjectDirectionWest(boolean proDirWest)
-	{
-		projectDirectionEast = proDirWest;
-	}
-
-	public boolean isProjectDirectionSouth()
-	{
-		return projectDirectionSouth;
-	}
-
-	public void setProjectDirectionSouth(boolean proDirSouth)
-	{
-		projectDirectionEast = proDirSouth;
+		color = c;
 	}
 
 	// //////////////////////////////////////////////////////////////////////////////
@@ -102,4 +80,17 @@ public class Projector extends Solid
 
 	}
 
+	public void decodeMetaData(short metaData)
+	{
+		byte color = (byte)(metaData%10);
+		metaData/=10;
+		byte direct = (byte)(metaData%10);
+		metaData/=10;
+		byte y = (byte)(metaData%10);
+		metaData/=10;
+		byte x = (byte)(metaData%10);
+		setDirection(direct);
+		setColor(color);
+		setPosition(x, y);
+	}
 }

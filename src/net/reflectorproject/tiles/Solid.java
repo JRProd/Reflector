@@ -28,18 +28,31 @@ public class Solid extends Tile
 	public Solid(Grid w,byte x, byte y, boolean move, String src, byte direct) {
 		super(w,x, y, move, src, direct);
 	}
+	
+	public Solid(Grid w, short metadata)
+	{
+		super(w);
+		decodeMetaData(metadata);
+	}
 
 	public void update() 
 	{
 		// TODO Auto-generated method stub
-		//Getting error message "The type Solid must implement the inherited abstract method Tile.update()"
 	}
 	
 	
 	public void paint()
 	{
 		//TODO Auto-generated method stub
-		//Getting error message
+	}
+	
+	public void decodeMetaData(short metaData)
+	{
+		//TODO Auto-generated method stub
+		byte y = (byte)(metaData%10);
+		metaData/=10;
+		byte x = (byte)(metaData%10);
+		setPosition(x, y);
 	}
 }
 

@@ -5,6 +5,8 @@ import net.reflectorproject.world.Grid;
 public class Receptor extends Solid
 {
 
+	public byte color;
+	
 	public Receptor()
 	{
 		// TODO Auto-generated constructor stub
@@ -40,6 +42,16 @@ public class Receptor extends Solid
 		super(w, x, y, move, src, direct);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public byte getColor()
+	{
+		return color;
+	}
+	
+	public void setColor(byte c)
+	{
+		color = c;
+	}
 
 	public void update()
 	{
@@ -49,6 +61,20 @@ public class Receptor extends Solid
 	public void paint()
 	{
 
+	}
+	
+	public void decodeMetaData(short metaData)
+	{
+		byte color = (byte)(metaData%10);
+		metaData/=10;
+		byte direct = (byte)(metaData%10);
+		metaData/=10;
+		byte y = (byte)(metaData%10);
+		metaData/=10;
+		byte x = (byte)(metaData%10);
+		setDirection(direct);
+		setColor(color);
+		setPosition(x, y);
 	}
 
 }
